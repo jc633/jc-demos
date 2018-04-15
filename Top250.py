@@ -81,5 +81,5 @@ if __name__ == '__main__':
     # 往表中写入标题行,以列表形式写入！
     ws.append(['电影名', '年份', '地区', '剧情类型', '导演', '主演', '评分', '评论人数', '简介'])
     src = 'https://movie.douban.com/top250'
-    getHtml(src)
+    getHtml(src) 
     wb.save('test2.xlsx')  # 存入所有信息后，保存为filename.xlsx
