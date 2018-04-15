@@ -18,8 +18,8 @@ def testInsert(Cursor):
         ages = [12, 13, 14, 15]
         sexs = ['男', '男', '女', '女']
         for i in range(4):
-            #             sql = 'insert into test values(' +str(ids[i]) + ',"' + names[i] + '",' + str(ages[i]) + ',"' + sex[i] + '"'')'            
-            #             sql = 'insert into test values({},"{}",{},"{}")'.format(ids[i], names[i], ages[i], sexs[i])          
+            # sql = 'insert into test values(' +str(ids[i]) + ',"' + names[i] + '",' + str(ages[i]) + ',"' + sex[i] + '"'')'            
+            # sql = 'insert into test values({},"{}",{},"{}")'.format(ids[i], names[i], ages[i], sexs[i])          
             sql = 'insert into test values(%d,"%s",%d,"%s")' % (ids[i], names[i], ages[i], sexs[i])
             print sql
             Cursor.execute(sql)
