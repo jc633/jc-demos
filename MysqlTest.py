@@ -18,15 +18,9 @@ def testInsert(Cursor):
         ages = [12, 13, 14, 15]
         sexs = ['男', '男', '女', '女']
         for i in range(4):
-            #             sql = 'insert into test values(' +\
-            #                 str(ids[i]) + ',"' + names[i] + '",' + \
-            #                 str(ages[i]) + ',"' + sex[i] + '"'')'
-            
-            #             sql = 'insert into test values({},"{}",{},"{}")'.format(
-            #                 ids[i], names[i], ages[i], sexs[i])
-            
-            sql = 'insert into test values(%d,"%s",%d,"%s")' % (
-                ids[i], names[i], ages[i], sexs[i])
+            #             sql = 'insert into test values(' +str(ids[i]) + ',"' + names[i] + '",' + str(ages[i]) + ',"' + sex[i] + '"'')'            
+            #             sql = 'insert into test values({},"{}",{},"{}")'.format(ids[i], names[i], ages[i], sexs[i])          
+            sql = 'insert into test values(%d,"%s",%d,"%s")' % (ids[i], names[i], ages[i], sexs[i])
             print sql
             Cursor.execute(sql)
             print '添加成功'
@@ -94,8 +88,7 @@ def testCounts(cursor):
 
 if __name__ == '__main__':
     try:
-        con = MySQLdb.connect(
-            'localhost', 'root', 'root', 'python', charset='utf8')
+        con = MySQLdb.connect('localhost', 'root', 'root', 'python', charset='utf8')
         # 加入编码，防止表中乱码，切记，是 utf8 ！！！不是utf-8!
         cursor = con.cursor()  # 查询返回一个元组对象
         # cursor = con.cursor(MySQLdb.cursors.DictCursor)  # 加上该参数后，查询返回一个字典对象
