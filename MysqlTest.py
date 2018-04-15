@@ -1,5 +1,8 @@
-本次测试采用的是MySqldb模块， python环境：2.7.8，见不少网友说python3 不再支持该模块，所以使用python3的可用pymysql代替，两者的操作并没有太大区别。
+
 # coding=UTF-8
+'''
+本次测试采用的是MySqldb模块， python环境：2.7.8，见不少网友说python3 不再支持该模块，所以使用python3的可用pymysql代替，两者的操作并没有太大区别。
+'''
 import MySQLdb
 
 
